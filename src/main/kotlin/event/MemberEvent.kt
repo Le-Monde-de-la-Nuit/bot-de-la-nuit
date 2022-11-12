@@ -21,8 +21,7 @@ class MemberEvent : ListenerAdapter() {
             badNickname(membreDeLaNuit, event.channel)
             return
         }
-        var numeric = false
-        numeric = try {
+        val numeric = try {
             code.toInt()
             true
         } catch (e: NumberFormatException) {
@@ -34,7 +33,7 @@ class MemberEvent : ListenerAdapter() {
         }
     }
 
-    private fun badNickname(membre: Member, channel: MessageChannel) {
+    private fun badNickname(membre: Member, messageChannel: MessageChannel) {
         membre.addBadNickname()
         if (membre.getBadNickname() >= 3) {
             val member = membre.member
@@ -44,10 +43,10 @@ class MemberEvent : ListenerAdapter() {
             }
             member.kick("Mauvais pseudonyme").queue()
             membre.resetBadNickname()
-            channel.sendMessage("Le membre ${member.asMention} a été kick car il n'avait pas mis son identifiant" +
+            messageChannel.sendMessage("Le membre ${member.asMention} a été kick car il n'avait pas mis son identifiant" +
                     " comme pseudonyme après 3 avertissements.").queue()
             return
         }
-        channel.sendMessage("${membre.member.asMention}, vous devez mettre votre identifiant comme pseudonyme.").queue()
+        messageChannel.sendMessage("${membre.member.asMention}, vous devez mettre votre identifiant comme pseudonyme.").queue()
     }
 }
