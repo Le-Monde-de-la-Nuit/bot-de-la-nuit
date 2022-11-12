@@ -3,5 +3,5 @@ services:
   bot:
     build: .
     environment:
-      - BOT_TOKEN=MTA0MTExNDA5MDU2ODk0MTY4OA.G59e40.MRhxEeIwbVyI8kK7YzDiImAfmosoYIH3emH6PQ
-      - ROLE_ID=1041005438570864681
+      - TOKEN=token
+      - ROLE_ID=id
