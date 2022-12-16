@@ -5,3 +5,4 @@ services:
     environment:
       - TOKEN=token
       - ROLE_ID=id
+      - WELCOME_CHANNEL_ID=id
