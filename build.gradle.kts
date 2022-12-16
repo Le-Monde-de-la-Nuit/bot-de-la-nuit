@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "org.lemondedelanuit"
-version = "0.1.0"
+version = "0.1.1"
 
 val jdaVersion = "5.0.0-beta.2"
 
