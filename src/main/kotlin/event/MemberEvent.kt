@@ -2,8 +2,8 @@ package event
 
 import api.Member
 import api.getMember
-import api.getRole
-import net.dv8tion.jda.api.entities.MessageChannel
+import api.roleOfMember
+import net.dv8tion.jda.api.entities.channel.middleman.MessageChannel
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent
 import net.dv8tion.jda.api.hooks.ListenerAdapter
 
@@ -12,7 +12,7 @@ class MemberEvent : ListenerAdapter() {
     @Override
     fun messageSent(event: MessageReceivedEvent) {
         val member = event.member ?: return
-        if (member.user.isBot || member.roles.contains(getRole())) return
+        if (member.user.isBot || member.roles.contains(roleOfMember)) return
         val code = member.nickname
 
         val membreDeLaNuit = getMember(member)

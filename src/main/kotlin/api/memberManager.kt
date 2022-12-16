@@ -37,11 +37,3 @@ fun getMember(member: net.dv8tion.jda.api.entities.Member): Member {
     }
     return result
 }
-
-fun defineRole(role: Role) {
-    roleOfMember = role
-}
-
-fun getRole(): Role? {
-    return roleOfMember
-}

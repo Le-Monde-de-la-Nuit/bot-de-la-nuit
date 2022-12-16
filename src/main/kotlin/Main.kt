@@ -1,4 +1,5 @@
-import api.defineRole
+import api.roleOfMember
+import api.welcomeChannel
 import commands.*
 import event.MemberEvent
 import net.dv8tion.jda.api.JDABuilder
@@ -14,8 +15,8 @@ fun main(args: Array<String>) {
         .build()
     api.awaitReady()
     val guild = api.guilds.first()!!
-    val role = guild.getRoleById(args[1]) ?: throw Exception("Role not found")
-    defineRole(role)
+    roleOfMember = guild.getRoleById(args[1]) ?: throw Exception("Role not found")
+    welcomeChannel = guild.getTextChannelById(args[2]) ?: throw Exception("Channel not found")
     guild.updateCommands()
         .addCommands(registerCommand).queue()
 }
