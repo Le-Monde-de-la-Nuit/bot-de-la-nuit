@@ -10,7 +10,7 @@ plugins {
 group = "org.lemondedelanuit"
 version = "0.1.0"
 
-val jdaVersion = "4.4.0_352"
+val jdaVersion = "5.0.0-beta.2"
 
 repositories {
     mavenCentral()
