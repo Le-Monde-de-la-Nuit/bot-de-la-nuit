@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "org.lemondedelanuit"
-version = "0.1.1"
+version = "0.1.2"
 
 val jdaVersion = "5.0.0-beta.2"
 
@@ -19,21 +19,22 @@ repositories {
 
 dependencies {
     implementation("net.dv8tion:JDA:$jdaVersion")
+    implementation("org.yaml:snakeyaml:1.33")
     testImplementation(kotlin("test"))
-}
-
-tasks.test {
-    useJUnitPlatform()
-}
-
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "17"
 }
 
 application {
     mainClass.set("MainKt")
 }
 
-tasks.withType<ShadowJar> {
-    relocate("net.dv8tion.jda", "org.lemondedelanuit.driver.jda")
+tasks {
+    withType<KotlinCompile> {
+        kotlinOptions.jvmTarget = "17"
+    }
+    test {
+        useJUnitPlatform()
+    }
+    withType<ShadowJar> {
+
+    }
 }
