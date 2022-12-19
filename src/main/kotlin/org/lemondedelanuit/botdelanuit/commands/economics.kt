@@ -1,4 +1,4 @@
-package commands
+package org.lemondedelanuit.botdelanuit.commands
 
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent
 import net.dv8tion.jda.api.hooks.ListenerAdapter
@@ -44,7 +44,7 @@ class EconomicsEvent : ListenerAdapter() {
             event.reply(lists.random()).setEphemeral(false).queue()
         } catch (e: Exception) {
             event.reply("Une erreur est survenue.").setEphemeral(true).queue()
-            utils.error(e.message?: "Une erreur inconnue est survenue.")
+            org.lemondedelanuit.botdelanuit.utils.error(e.message ?: "Une erreur inconnue est survenue.")
         }
     }
 }

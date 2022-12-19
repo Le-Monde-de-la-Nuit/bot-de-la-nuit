@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "org.lemondedelanuit"
-version = "0.1.3"
+version = "0.2.0"
 
 val jdaVersion = "5.0.0-beta.2"
 
@@ -24,7 +24,7 @@ dependencies {
 }
 
 application {
-    mainClass.set("MainKt")
+    mainClass.set("org.lemondedelanuit.botdelanuit.MainKt")
 }
 
 tasks {

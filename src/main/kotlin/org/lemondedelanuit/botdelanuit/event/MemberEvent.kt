@@ -1,8 +1,8 @@
-package event
+package org.lemondedelanuit.botdelanuit.event
 
-import api.Member
-import api.getMember
-import api.roleOfMember
+import org.lemondedelanuit.botdelanuit.api.Member
+import org.lemondedelanuit.botdelanuit.api.getMember
+import org.lemondedelanuit.botdelanuit.api.roleOfMember
 import net.dv8tion.jda.api.entities.channel.middleman.MessageChannel
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent
 import net.dv8tion.jda.api.hooks.ListenerAdapter

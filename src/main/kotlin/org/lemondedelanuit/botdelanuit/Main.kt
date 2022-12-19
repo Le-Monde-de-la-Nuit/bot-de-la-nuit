@@ -1,11 +1,13 @@
-import api.roleOfMember
-import api.welcomeChannel
-import commands.*
-import event.MemberEvent
+package org.lemondedelanuit.botdelanuit
+
+import org.lemondedelanuit.botdelanuit.api.roleOfMember
+import org.lemondedelanuit.botdelanuit.api.welcomeChannel
+import org.lemondedelanuit.botdelanuit.event.MemberEvent
 import net.dv8tion.jda.api.JDABuilder
 import net.dv8tion.jda.api.OnlineStatus
 import net.dv8tion.jda.api.entities.Activity
 import net.dv8tion.jda.api.requests.GatewayIntent
+import org.lemondedelanuit.botdelanuit.commands.*
 
 fun main(args: Array<String>) {
     val api = JDABuilder.createDefault(args[0], GatewayIntent.GUILD_MEMBERS)

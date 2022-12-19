@@ -1,4 +1,4 @@
-package commands
+package org.lemondedelanuit.botdelanuit.commands
 
 import net.dv8tion.jda.api.EmbedBuilder
 import net.dv8tion.jda.api.Permission

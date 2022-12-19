@@ -1,7 +1,7 @@
-package commands
+package org.lemondedelanuit.botdelanuit.commands
 
-import api.roleOfMember
-import api.welcomeChannel
+import org.lemondedelanuit.botdelanuit.api.roleOfMember
+import org.lemondedelanuit.botdelanuit.api.welcomeChannel
 import net.dv8tion.jda.api.Permission
 import net.dv8tion.jda.api.entities.Member
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent

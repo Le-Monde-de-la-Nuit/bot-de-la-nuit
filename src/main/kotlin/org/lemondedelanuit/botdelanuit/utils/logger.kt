@@ -1,4 +1,4 @@
-package utils
+package org.lemondedelanuit.botdelanuit.utils
 
 var prefix = "BOT"
 fun log(message: String) {
