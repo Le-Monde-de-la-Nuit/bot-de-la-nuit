@@ -10,7 +10,7 @@ import net.dv8tion.jda.api.requests.GatewayIntent
 fun main(args: Array<String>) {
     val api = JDABuilder.createDefault(args[0], GatewayIntent.GUILD_MEMBERS)
         .enableIntents(GatewayIntent.GUILD_MEMBERS)
-        .addEventListeners(MemberEvent(), RegisterEvent(), EconomicsEvent())
+        .addEventListeners(MemberEvent(), RegisterEvent(), EconomicsEvent(), PollEvent())
         .build()
     api.awaitReady()
     api.presence.setPresence(OnlineStatus.ONLINE, Activity.watching("Le Monde de la Nuit"), false)
@@ -18,6 +18,6 @@ fun main(args: Array<String>) {
     roleOfMember = guild.getRoleById(args[1]) ?: throw Exception("Role not found")
     welcomeChannel = guild.getTextChannelById(args[2]) ?: throw Exception("Channel not found")
     guild.updateCommands()
-        .addCommands(registerCommand, economicsCommand)
+        .addCommands(registerCommand, economicsCommand, pollCommand)
         .queue()
 }
